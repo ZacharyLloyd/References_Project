@@ -5,8 +5,8 @@
 
 using namespace std;
 
-void badSwap(int x, int y);
-void goodSwap(int& x, int& y);
+void normalTransaction(int x, int y);
+void hackedTransaction(int& x, int& y);
 
 int main()
 {
@@ -16,27 +16,27 @@ int main()
 	cout << "myScore: " << myScore << "\n";
 	cout << "yourScore: " << yourScore << "\n\n";
 
-	cout << "Calling badSwap()\n";
-	badSwap(myScore, yourScore);
+	cout << "Calling hackedTransaction()\n";
+	hackedTransaction(myScore, yourScore);
 	cout << "myScore: " << myScore << "\n";
 	cout << "yourScore: " << yourScore << "\n\n";
 
-	cout << "Calling goodSwap()\n";
-	goodSwap(myScore, yourScore);
+	cout << "Calling normalTransaction()\n";
+	normalTransaction(myScore, yourScore);
 	cout << "myScore: " << myScore << "\n";
 	cout << "yourScore: " << yourScore << "\n";
 
 	return 0;
 }
 
-void badSwap(int x, int y)
+void hackedTransaction(int x, int y)
 {
 	int temp = x;
 	x = y;
 	y = temp;
 }
 
-void goodSwap(int& x, int& y)
+void normalTransaction(int& x, int& y)
 {
 	int temp = x;
 	x = y;
